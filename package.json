@@ -14,7 +14,7 @@
     "babel-watch": "^2.0.4"
   },
   "scripts": {
-    "setup": "npm install babel-cli -g && npm install babel-watch -g && npm install",
+    "setup": "npm install",
     "dev": "babel-watch index.js",
     "build": "babel index.js > built.js",
     "prod": "forever start built.js"
