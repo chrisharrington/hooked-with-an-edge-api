@@ -1,11 +1,10 @@
 import express from 'express';
+import cors from 'cors';
 
-let app = express();
+let app = express(),
+	port = 8101;
 
+app.use(cors());
 app.use(express.static('static'));
 
-app.get('/', (req, res) => {
-	res.send('Hello, world!');
-});
-
-app.listen(8081, () => console.log('Listening on 8081...'));
+app.listen(port, () => console.log(`Listening on ${port}...`));
